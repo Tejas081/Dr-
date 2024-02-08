@@ -24,9 +24,9 @@
 
         // Handle form submission
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $patient_name = $_POST["patient_name"];
-            $appointment_date = $_POST["appointment_date"];
-            $appointment_time = $_POST["appointment_time"];
+            $patient_name = $_POST["patientName"];
+            $appointment_date = $_POST["appointmentDate"];
+            $appointment_time = $_POST["timeSlots"];
 
             // Insert data into the database
             $sql_insert = "INSERT INTO appointments (patient_name, appointment_date, appointment_time) 
