@@ -1,0 +1,156 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    overflow: hidden;
+}
+
+header a {
+    text-decoration: none;
+    background: #fff;
+    color: #333;
+    padding: 10px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px; /* Add rounded corners to buttons */
+    transition: background 0.3s ease; /* Smooth hover transition */
+}
+
+header a:hover {
+    background: #ffeb3b; /* Yellow on hover */
+}
+
+header .right {
+    float: right;
+}
+
+section {
+    margin: 20px;
+    text-align: center; /* Center align content */
+}
+
+#hospital-images {
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around; /* Space around images */
+    align-items: center; /* Center align vertically */
+}
+
+#hospital-images img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px; /* Add rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+#doctors {
+    display: flex;
+    justify-content: space-around; /* Space around doctor profiles */
+    flex-wrap: wrap; /* Wrap doctor profiles to the next line if needed */
+    border-radius: 15px;
+}
+
+.doctor-profile {
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing between doctor profiles */
+    margin-top: 20px;
+}
+
+.doctor-profile img {
+    width: 80px; /* Adjust doctor image size */
+    height: 80px;
+    border-radius: 50%; /* Make doctor images circular */
+}
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+#review {
+    margin-top:5px;
+    
+    padding: 20px;
+    background-color: red;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(180, 13, 13, 0.1);
+    color: white;
+    display: flex;
+    justify-content: space-around; /* Space around reviews */
+}
+
+#review div {
+    width: 30%; /* Adjust width of each review div */
+}
+
+footer {
+    background-color: #34495e;
+    color:white;
+    text-align: center;
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+}
+footer #foot{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Wrap footer content to the next line if needed */
+}
+
+footer div {
+    margin: 10px;
+    flex: 1; /* Equal width for footer content */
+}
+
+#about, #faqs, #contact {
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+#faqs h2, #about h2, #contact h2 {
+    text-align: center;
+    position: relative;
+}
+
+.collapsible-button {
+    cursor: pointer;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.collapsible-button:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.collapsible-content {
+    display: none;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}

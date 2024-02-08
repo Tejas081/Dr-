@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+
+    <!-- Include Flatpickr styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            overflow: hidden;
+        }
+
+        header a {
+            text-decoration: none;
+            background: #fff;
+            color: #333;
+            padding: 10px;
+            display: block;
+            float: left;
+            margin-right: 10px;
+            border-radius: 5px; /* Add rounded corners to buttons */
+            transition: background 0.3s ease; /* Smooth hover transition */
+        }
+
+        header a:hover {
+            background: #ffeb3b; /* Yellow on hover */
+        }
+
+        header .right {
+            float: right;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            appearance: none;
+        }
+
+        select:hover {
+            cursor: pointer;
+        }
+
+        select {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Use flex to display time slots horizontally */
+        .time-slots {
+            display: flex;
+            gap: 10px; /* Adjust the gap between time slots */
+        }
+
+        .time-slot-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .time-slot-box:hover {
+            background-color: #f0f0f0;
+        }
+
+        .time-slot-box select {
+            width: 100%;
+            appearance: none;
+            border: none;
+            background-color: transparent;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #258cd1;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">Home</a>
+    <a class="right" href="login.html">Login</a>
+</header>
+
+<main>
+    <form action="/process_form.php" method="post">
+        <label for="patientName">Patient's Name:</label>
+        <input type="text" id="patientName" name="patientName" required>
+
+        <label for="symptoms">Symptoms:</label>
+        <textarea id="symptoms" name="symptoms" required></textarea>
+
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="text" id="appointmentDate" name="appointmentDate" required>
+
+        <label for="appointmentTime">Appointment Time:</label>
+        <div class="time-slots" id="timeSlots"></div>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+</main>
+
+<!-- Include Flatpickr script -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+    flatpickr("#appointmentDate", {
+        dateFormat: "Y-m-d",
+        minDate: "today",
+        enableTime: false,
+        altInput: true,
+        altFormat: "F j, Y",
+        onChange: function(selectedDates, dateStr, instance) {
+            // Call a function to update time slots based on the selected date
+            updateTimeSlots(selectedDates[0]);
+        }
+    });
+
+    function updateTimeSlots(selectedDate) {
+        // Example time slots, you can customize this based on your requirements
+        const timeSlots = [
+            "09:00 AM",
+            "10:00 AM",
+            "11:00 AM",
+            "01:00 PM",
+            "02:00 PM",
+            "03:00 PM"
+        ];
+
+        const timeSlotsContainer = document.getElementById("timeSlots");
+
+        // Clear existing time slots
+        timeSlotsContainer.innerHTML = "";
+
+        // Create and append boxes for each time slot
+        timeSlots.forEach(slot => {
+            const boxElement = document.createElement("div");
+            boxElement.classList.add("time-slot-box");
+
+            const selectElement = document.createElement("select");
+            selectElement.name = "appointmentTime";
+            selectElement.required = true;
+
+            const optionElement = document.createElement("option");
+            optionElement.value = slot;
+            optionElement.textContent = slot;
+            selectElement.appendChild(optionElement);
+
+            boxElement.appendChild(selectElement);
+            timeSlotsContainer.appendChild(boxElement);
+        });
+    }
+</script>
+
+</body>
+</html>
