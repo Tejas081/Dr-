@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="./css/book.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <form action="book.php" method="post">
+            <label for="patient_name">Your Name:</label>
+            <input type="text" name="patient_name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <label for="address">Address:</label>
+            <input type="text" name="address" required>
+
+            <label for="gender">Gender:</label>
+            <select name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="appointment_date">Appointment Date:</label>
+            <input type="date" name="appointment_date" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+
+            <label for="contact_number">Contact Number:</label>
+            <input type="text" name="contact_number" required>
+
+            <label for="symptoms">Symptoms:</label>
+            <textarea name="symptoms" required></textarea>
+
+            <input type="submit" value="Book Appointment">
+        </form>
+
+        <!-- Stylish Admin login button -->
+        <a href="admin.html" class="admin-login-btn">Admin Login</a>
+    </div>
+</body>
+</html>

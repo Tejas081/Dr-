@@ -1,0 +1,140 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: skyblue; /* Pale yellow background */
+    background-image: url('/photoes/bg.jpg'); 
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    color: #333; /* Dark text color */
+}
+
+/* Container styles */
+.container {
+    max-width: 800px; /* Increased max-width */
+    margin: 50px auto; /* Center the container horizontally */
+    text-align: center; /* Center the contents of the container */
+}
+
+/* Form title styles */
+h2 {
+    margin-bottom: 30px; /* Increased margin for spacing */
+    padding: 12px 20px; /* Match the padding with form inputs */
+    background-color: #4CAF50; /* Green background color */
+    color: #fff; /* White text color */
+    border-radius: 10px; /* Rounded corners */
+    position: relative; /* Relative positioning for pseudo-element */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Increased letter spacing */
+    display: inline-block; /* Ensure inline alignment */
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #fff; /* White line color */
+    bottom: -10px;
+    left: calc(50% - 25px); /* Center the line horizontally */
+}
+
+/* Form styles */
+form {
+    opacity: 95%;
+    background-color: #f2f2f2; /* Light gray background color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    display: inline-block; /* Ensure the form occupies only necessary space */
+    max-width: 600px; /* Max-width for form */
+    width: 100%; /* Ensure the form takes full width of its container */
+}
+
+/* Form label styles */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Form input styles */
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea,
+form select,
+form input[type="date"] {
+    width: calc(100% - 22px); /* Adjust width to account for padding */
+    padding: 12px 18px; /* Match the padding with form title */
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Form select styles */
+form select {
+    width: 100%; /* Set width for select box */
+    padding: 12px 18px; /* Match the padding with form title */
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: none; /* Remove the background arrow */
+}
+
+/* Form textarea styles */
+form textarea {
+    width: calc(100% - 22px); /* Adjust width to account for padding */
+    padding: 12px 18px; /* Match the padding with form title */
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Form submit button styles */
+form input[type="submit"] {
+    background-color: #4CAF50; /* Green button background */
+    color: #fff; /* White button text color */
+    border: none;
+    padding: 12px 20px; /* Match the padding with form inputs */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Admin login button styles */
+.admin-login-btn {
+    display: inline-block; /* Ensure the button is inline */
+    text-align: center;
+    text-decoration: none;
+    color: black; /* Green button text color */
+    border: 1px solid red; /* Green border */
+    padding: 12px 18px; /* Match the padding with form title */
+    border-radius: 5px;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.admin-login-btn:hover {
+    color: #fff; /* White button text color on hover */
+}
