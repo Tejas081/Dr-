@@ -156,3 +156,38 @@ footer div {
     overflow: hidden;
     transition: height 0.3s ease;
 }
+
+status {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.status1 {
+    border-radius: 100%; /* Makes it a circle */
+    width: 190px; /* Adjusts the width */
+    height: 190px; /* Adjusts the height */
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+
+/* Styling the iframe inside status1 */
+.status1 iframe {
+    width: 100%; /* Makes iframe fill the container */
+    height: 100%; /* Makes iframe fill the container */
+}
+
+/* Hover effect */
+.status1:hover {
+    border-color: #e74c3c; /* Red border on hover */
+}
+
+
+
+
+

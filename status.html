@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Information</title>
+  <style>
+  body {
+    background-image: url('/photoes/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 300%; /* Adjust the width here */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value (0.8 for 80% opacity) */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+    .doctor-card {
+      border-bottom: 1px solid #ccc;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .doctor-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .doctor-info {
+      flex: 1;
+    }
+
+    h2, p {
+      margin: 5px 0;
+    }
+
+    #status {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      
+    }
+
+    @media screen and (max-width: 600px) {
+      .doctor-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .doctor-image {
+        margin: 0 auto 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="doctor-card">
+      <img src="photoes/doctor.jpg" alt="Doctor Image" class="doctor-image">
+      <div class="doctor-info">
+        <h2>Dr. Pawan Kumar</h2>
+        <p>Degree: MD</p>
+        <p>Specialty: Cardiology</p>
+        <p>Disease Treated: Heart Diseases</p>
+      </div>
+      <h4>Status</h4>
+      <div id="status">
+        <iframe width="200" height="200" src="https://thingspeak.com/channels/2448927/widgets/810087" style="border: none; opacity: 0.5;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="doctor-card">
+      <img src="photoes/doctor.jpg" alt="Doctor Image" class="doctor-image">
+      <div class="doctor-info">
+        <h2>Dr. Annu Malik</h2>
+        <p>Degree: MD</p>
+        <p>Specialty: Orthopedic</p>
+        <p>Disease Treated:Bones Problems</p>
+      </div>
+      <h4>Status</h4>
+      <div id="status">
+        <iframe width="200" height="200"  src="https://thingspeak.com/channels/2448927/widgets/812152" style="border: none; opacity: 0.5;"></iframe>
+   </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="doctor-card">
+      <img src="photoes/doctor.jpg" alt="Doctor Image" class="doctor-image">
+      <div class="doctor-info">
+        <h2>Dr.Karan Puri</h2>
+        <p>Degree:BDS</p>
+        <p>Specialty:Dentist</p>
+        <p>Disease Treated:Teeth Problems</p>
+      </div>
+      <h4>Status</h4>
+      <div id="status">
+       <iframe width="200" height="200" style="border: none; opacity: 0.5;" src="https://thingspeak.com/channels/2448927/widgets/812152"></iframe>
+    </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
