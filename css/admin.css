@@ -1,4 +1,6 @@
 /* style.css */
+
+/* Default styles */
 body {
     background-image: url('/photoes/bg.jpg'); /* Replace 'background-image.jpg' with the path to your image */
     background-size: cover;
@@ -68,4 +70,19 @@ input[type="password"]:focus {
     outline: none;
     border-color: #4CAF50;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%; /* Adjust input width for even smaller screens */
+    }
 }
