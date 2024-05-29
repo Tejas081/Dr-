@@ -1,4 +1,4 @@
-body {
+/*body {
     
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,12 +24,212 @@ header a {
     display: block;
     float: left;
     margin-right: 10px;
+    border-radius: 5px; 
+    transition: background 0.3s ease; 
+}
+
+header a:hover {
+    background: #ffeb3b; 
+}
+
+header .right {
+    float: right;
+}
+
+section {
+    margin: 20px;
+    text-align: center; 
+}
+
+#hospital-images {
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+#hospital-images img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#doctors {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    border-radius: 15px;
+}
+
+.doctor-profile {
+    text-align: center;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+
+.doctor-profile img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+}
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+#review {
+    margin-top:5px;
+    
+    padding: 20px;
+    background-color: red;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(180, 13, 13, 0.1);
+    color: white;
+    display: flex;
+    justify-content: space-around; 
+}
+
+#review div {
+    width: 30%; 
+}
+
+footer {
+    background-color: #34495e;
+    color:white;
+    text-align: center;
+    padding: 15px;
+    bottom: 0;
+    width:98%;
+}
+footer #foot{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+footer div {
+    margin: 10px;
+    flex: 1; 
+}
+
+#about, #faqs, #contact {
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+#faqs h2, #about h2, #contact h2 {
+    text-align: center;
+    position: relative;
+}
+
+.collapsible-button {
+    cursor: pointer;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.collapsible-button:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.collapsible-content {
+    display: none;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+status {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.status1 {
+    border-radius: 100%; 
+    width: 190px; 
+    height: 190px; 
+    overflow: hidden; 
+}
+
+
+
+.status1 iframe {
+    width: 100%; 
+    height: 100%;
+}
+
+
+.status1:hover {
+    border-color: #e74c3c; 
+}
+*/
+
+
+
+
+
+
+
+
+
+
+body {
+    
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image:url('/Dr-/photoes/dr.png');
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    padding: 15px;
+    overflow: hidden;
+}
+
+header a {
+    text-decoration: none;
+    background: transparent;
+    color: black;
+    padding: 10px;
+    display: block;
+    float: left;
+    margin-right: 10px;
     border-radius: 5px; /* Add rounded corners to buttons */
     transition: background 0.3s ease; /* Smooth hover transition */
 }
 
 header a:hover {
-    background: #ffeb3b; /* Yellow on hover */
+    background: rgba(95, 92, 92, 0.646); /* Yellow on hover */
 }
 
 header .right {
@@ -85,7 +285,7 @@ h1{
     margin-top:5px;
     
     padding: 20px;
-    background-color: red;
+    background-color: rgb(27, 24, 24);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(180, 13, 13, 0.1);
     color: white;
@@ -187,7 +387,6 @@ status {
 .status1:hover {
     border-color: #e74c3c; /* Red border on hover */
 }
-
 
 
 
